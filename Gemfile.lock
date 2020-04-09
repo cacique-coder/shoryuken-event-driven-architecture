@@ -1,0 +1,43 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    aws-eventstream (1.1.0)
+    aws-partitions (1.296.0)
+    aws-sdk-core (3.94.0)
+      aws-eventstream (~> 1, >= 1.0.2)
+      aws-partitions (~> 1, >= 1.239.0)
+      aws-sigv4 (~> 1.1)
+      jmespath (~> 1.0)
+    aws-sigv4 (1.1.1)
+      aws-eventstream (~> 1.0, >= 1.0.2)
+    concurrent-ruby (1.1.6)
+    foreman (0.87.1)
+    jmespath (1.4.0)
+    mustermann (1.1.1)
+      ruby2_keywords (~> 0.0.1)
+    rack (2.2.2)
+    rack-protection (2.0.8.1)
+      rack
+    ruby2_keywords (0.0.2)
+    shoryuken (5.0.4)
+      aws-sdk-core (>= 2)
+      concurrent-ruby
+      thor
+    sinatra (2.0.8.1)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.8.1)
+      tilt (~> 2.0)
+    thor (1.0.1)
+    tilt (2.0.10)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  foreman
+  shoryuken
+  sinatra
+
+BUNDLED WITH
+   2.1.2
