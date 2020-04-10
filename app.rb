@@ -7,4 +7,5 @@ class User
 
   field :name, type: String
   field :email, type: String
+  field :reseted_at, type: Time
 end
