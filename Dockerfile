@@ -1,9 +1,9 @@
 FROM ruby:2.7.0
 
-RUN mkdir app
-WORKDIR /app
+RUN mkdir test
+WORKDIR /test
 
 COPY . .
 RUN bundle install
 
-CMD ruby app.rb
+CMD ruby api.rb

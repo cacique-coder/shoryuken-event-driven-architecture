@@ -7,8 +7,8 @@ services:
   app:
     image: 'ruby:2.7.0'
     build: .
-    command: 'ruby ./app.rb'
+    command: bundle exec shotgun ./api.rb --port=5000 --host="0.0.0.0"
     ports:
       - 5000:5000
     volumes:
-      - '.:/app'
+      - '.:/test'

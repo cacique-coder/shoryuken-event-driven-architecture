@@ -1,8 +1,10 @@
-require 'sinatra'
+require 'mongoid'
 
-set :port, 5000
-set :bind, '0.0.0.0'
+Mongoid.load!(File.join(File.dirname(__FILE__), 'config', 'mongoid.yml'))
 
-get '/' do
-  "Home page"
+class User
+  include Mongoid::Document
+
+  field :name, type: String
+  field :email, type: String
 end
