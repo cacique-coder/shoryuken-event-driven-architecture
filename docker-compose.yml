@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  db:
+    image: 'mongo'
+    ports:
+      - 27017:27017
+  app:
+    image: 'ruby:2.7.0'
+    build: .
+    command: 'ruby ./app.rb'
+    ports:
+      - 5000:5000
+    volumes:
+      - '.:/app'
