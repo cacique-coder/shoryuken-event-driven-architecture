@@ -5,11 +5,25 @@ services:
     ports:
       - 27017:27017
   app:
-    image: 'ruby:2.7.0'
+    image: ruby:2.7.0
     build: .
+    image: 'event-driven-example'
     env_file: .env
     command: bundle exec shotgun ./api.rb --port=5000 --host="0.0.0.0"
     ports:
       - 5000:5000
     volumes:
       - '.:/app'
+    depends_on:
+      - db
+
+  shoryuken:
+    image: ruby:2.7.0
+    build: .
+    image: 'event-driven-example'
+    env_file: .env
+    command: bundle exec shoryuken -r ./shoryuken.rb
+    volumes:
+      - '.:/app'
+    depends_on:
+      - db

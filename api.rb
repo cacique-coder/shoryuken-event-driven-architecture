@@ -4,6 +4,7 @@ require_relative './app'
 set :port, 5000
 set :bind, '0.0.0.0'
 set :user_created, "User created"
+
 get '/' do
   User.all.to_json
 end
