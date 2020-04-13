@@ -10,6 +10,8 @@ This is a small application which has the idea to explain how to use shoryuken t
 ## How to run application
 
 ```sh
+  cp .env.sample .env
+  # Replaces values on .env with you own keys
   docker-compose up --build
 ```
 
